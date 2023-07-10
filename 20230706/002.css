@@ -1,0 +1,48 @@
+/* font-face 상대경로로 폰트 연결 */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('./font/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: Pretendard-Regular, 'Times New Roman', Dotum, '돋움', sans-serif;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+.parent {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    font-size: 20px;
+}
+
+.child {
+    /* width: 50%; */
+    width: 50vw;
+    height: 50vh;
+    /* 200 * 0.5 = 100px */
+    /* vw, vh: 화면이 기준. 이 경우, 화면의 반 */
+    
+    /*font-size: 2em;*/ /* 부모를 기준으로 배수가 됨. 중첩시킬수록 커짐 */
+    font-size: 0.5em;
+    background-color: salmon;
+}   /* vmin, vmax은 반응형 고려할 때. 핸드폰 가로모드, 세로모드 같은.. */
+
+html {
+    font-size: 10px;
+}
+
+p {
+    font-size: 4rem;
+    /* 16px * 4 = 64px */
+    /* html의 폰트 크기가 10px이면, p의 폰트 크기는 4rem이니까 40px */
+}

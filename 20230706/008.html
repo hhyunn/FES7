@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전역변수</title>
+    <style>
+        :root {
+            --main-color: rgb(62, 94, 189);
+            --pane-padding: 4px 40px;
+        }   /* 변수 선언 */ /* 유지보수, 재사용성에 좋음 */
+
+        .color1 {
+            --point-color: red;
+        }   /* 루트 대신 div라고 하면 div에만 적용됨 */
+
+        .color2 {
+            --point-color: yellow;
+        }
+
+        p {
+            color: var(--main-color);
+        }   /* var는 변수 사용할 때 씀 */
+
+        button {
+            color: var(--main-color);
+            border: 1px solid var(--main-color);
+            padding: var(--pane-padding);
+            background-color: var(--point-color);
+        }
+    </style>
+</head>
+<body>
+    <p>안녕하세요</p>
+    <button>버튼</button>
+    <div class="color1">
+        <p>안녕하세요</p>
+        <button>버튼</button>
+    </div>
+    <div class="color2">
+        <p>안녕하세요</p>
+        <button>버튼</button>
+    </div>
+</body>
+</html>

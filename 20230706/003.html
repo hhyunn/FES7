@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        p {
+            /* font-weight: bold; */
+            /* font-weight: normal; */
+            /* font-weight: lighter; */
+            /* font-weight: bolder; */
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            /* font-weight: bold; */
+            text-align: center;
+            text-align: justify;
+
+            /* vertical-align: top; */
+            line-height: 1.6;   /* 배수 개념 */
+            /* letter-spacing: 10px; */   /* 글자가 벌어져있다가 모이게 하면서 애니메이션처럼 적용/응용 */
+            /* word-spacing: 40px; */ /* 단어 사이들의 간격 */
+            text-indent: 10px;
+
+            background-color: aquamarine;
+            /* 1줄 말줄임 처리 */ /* 텍스트가 넘쳤을 때 숨김처리 하겠다 */
+            /* white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; */
+
+            /* 여러줄 말줄임 */ /* 무언가가 박스를 넘쳤을 때 숨김처리 하겠다 */
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            font-style: italic;
+        }   /* 200을 넣으면, (200이 없으니까) 200에 가까운 100으로 보여줌. font-weight를 안 적으면, 레귤러 값으로 보여줌 */ /* snippet-generator.app 에서 만들어서 스니펫 설정 */ /* https://snippet-generator.app/?description=%EB%A7%90%EC%A4%84%EC%9E%84%EC%B2%98%EB%A6%AC&tabtrigger=ell&snippet=overflow%3A+hidden%3B%0Adisplay%3A+-webkit-box%3B%0A-webkit-box-orient%3A+vertical%3B%0A-webkit-line-clamp%3A+3%3B&mode=vscode */ /* 여러줄 말줄임표는 버그가 있을 수 있음 */
+
+        p::first-letter {
+            text-transform: uppercase;
+            font-size: 32px;
+        }
+
+        .fes7 {
+            /* text-transform: uppercase; */
+            /* text-transform: lowercase; */
+            text-transform: capitalize;
+            /* text-decoration: orange underline solid 3px; */
+            /* text-decoration: orange underline wavy 2px; */
+            text-decoration: orange underline line-through overline wavy 2px;
+            /* text-decoration-color: orange;
+            text-decoration-line: underline line-through overline;
+            text-decoration-style: wavy;
+            text-decoration-thickness: 2px; */
+        }
+
+        .tx-shadow {
+            text-shadow: 1px 0px 0px rgb(255, 0, 0),
+            -1px -0px 0px rgb(255, 0, 0);
+            
+            box-shadow: 4px 4px 0px rgb(255, 0, 0);
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <p title="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi amet eos rerum accusamus, ex officiis vero aut sequi fuga saepe reiciendis non animi maiores eius aspernatur sit, voluptate odit aperiam!">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi amet eos rerum accusamus, ex officiis vero aut sequi fuga saepe reiciendis non animi maiores eius aspernatur sit, voluptate odit aperiam!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore aspernatur architecto explicabo dolore ut, beatae et. Dignissimos culpa sed voluptatem omnis esse, quidem consectetur perferendis quod, repudiandae suscipit eligendi nemo!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem quia, officiis ut ratione quas omnis fugit placeat ipsam sequi ex quo architecto! Harum repellat eius id, autem hic eos nobis.</p>
+    <!-- <p class="fes7">Frontend School7 ddd aaa ggg</p> -->
+    <p class="fes7">Frontend School7 안녕하세요!</p>
+    <p class="tx-shadow">Text Shadow</p>
+</body>
+</html>

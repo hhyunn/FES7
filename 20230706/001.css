@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    /* font-family: 'aaaa'; */
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}   /* font-family에 적는 이름은 임의로 */
+
+.font-pc {
+    font-family: 'PyeongChangPeace-Bold';
+    /* font-family: 'aaaa'; */
+}
+
+body {
+    color: red;
+    /* border: 2px solid #ddd; */
+}
+
+h1,
+h2 {
+    font-weight: normal;
+}
+
+h1 {
+    /* color: royalblue; */
+    color: inherit;
+    /* border: 2px solid #ddd; */
+    /* color: red; */
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+strong {
+    border-bottom: 5px solid currentColor;
+    /* color:inherit; */
+    /* border: inherit; */
+}   /* currentColor: 부모에 color 값이 있다면 상속으로 처리됨. 부모에 color값이 없다면, body의 컬러값이 상속됨 */ /* color값은 아래로 쭉 상속이 되지만, border나 높이 속성값은 상속이 안 됨 (). inherit은 바로 위에만 가능*/ /*
+color값은 밑으로 쫙 퍼짐. button이나 input 등은 자신만의 것이 있음. border는 아래로 물려주지 않음 */
+
+/*
+button {
+    color: inherit;
+
+}
+*/
+
+h2{
+    color: #999;
+    /* font-family: 'Pretendard-Regular', Verdana, sans-serif; */
+    font-family: 'Begal Fat One', cursive;
+}   /* 폰트컬러에서 마지막 요소일 경우에만 대비율이 나옴. 대비율 맞추는 이유: 웹접근성 */
