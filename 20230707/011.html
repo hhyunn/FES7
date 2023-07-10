@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경넣기</title>
+    <style>
+        body {
+            /* background-color: #eee; */
+            background-color: royalblue;
+        }
+
+        .bg {
+            height: 400px;
+            /* height: 2000px; */
+            /* background: skyblue url(./images/main-visual.jpg) no-repeat 50% 50% / cover; */
+            /* background: skyblue url(./images/main-visual.jpg) no-repeat 50% 50% / 200px; */
+            /* background: skyblue url(./images/main-visual.jpg) no-repeat 50% 50% / contain; */
+            background-color: skyblue;
+            background-image: url(./images/main-visual.jpg);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+
+            font-size: 200px;
+            font-weight: bold;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+        }   /* cover: 이미지가 중앙에 꽉 차있었으면 좋겠다 */ /* 클리밍마스크 됨 */
+
+        .bg2 {
+            height: 800px;
+            background: skyblue url(./images/main-visual.jpg) no-repeat 50% 50% / cover;
+            background-color: skyblue;
+            background-image: url(./images/main-visual.jpg), ;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        content
+    </div>
+</body>
+</html>

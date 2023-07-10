@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border-bottom: 10px solid skyblue;
+            /* box-shadow: 30px 20px 30px 0 royalblue; */
+            /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px; */ /* 박스 섀도우 사이트 참고 ( https://getcssscan.com/css-box-shadow-examples ) */
+            box-shadow: inset 0 -10px 0 0 royalblue;    /* border를 준 것 같은 효과 */
+            /* opacity: 0.2; */
+            background: linear-gradient(180deg, rgb(48, 48, 192) 20%, gold 30%, white 80%);     /* % 말고 px 넣어도 됨. 그라데이션 사이트 참고 ( https://cssgradient.io/ ) */
+            background: linear-gradient(180deg, royalblue 0%, gold 100%);
+        }   /* inset: 내부로 box-shadow를 주겠다 */ /* 디자이너가 피그마에 올린 거 복붙하면 됨 */
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

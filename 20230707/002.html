@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        /* 101점 */
+        p#id1 {
+            color: black;
+        }
+
+        /* 101 */
+        div #id1 {
+            color: green;
+        }
+
+        /* 1 */
+        p {
+            color: black;
+        }
+
+        /* 100 */
+        #id1 {
+            color: blue;
+        }
+
+        /* 10 */
+        .class {
+            color: yellow;
+        }
+
+        /* * {
+            color: royalblue !important;
+        } */    /* !important 도 여러개 사용하면 후자가 우선순위로 적용 */
+
+        #id .class.class1 {
+            color: royalblue !important;
+        }   /* 수업 놓친듯. #id2.class.class1 라고 했었던듯 */
+    </style>
+    <link rel="stylesheet" href="./002.css"><!-- link의 순서(위치)도 중요함 -->
+</head>
+<body>
+    <!-- <div>
+        <p id="id1" class="class1">
+            1. 이 글자는 어떤 색일까요?
+        </p>
+        <p id="id2" class="class1" style="color: red">
+            2. 이 글자는 어떤 색일까요?
+        </p>
+    </div> -->
+    <p>안녕하세요</p>
+    <div>
+        <p id="id1" class="class">
+            1. 이 글자는 어떤 색일까요?
+        </p>
+        <p id="id2" class="class class1 class3" style="color: red">
+            2. 이 글자는 어떤 색일까요??
+        </p>
+    </div>
+</body>
+</html>
