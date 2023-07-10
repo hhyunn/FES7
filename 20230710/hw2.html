@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        /* @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0; 
+            padding: 0;
+        }
+
+        :root {
+            --text-1: #29363D;
+            --text-2: #5A6A72;
+        }
+
+        #content0 {
+            width: 288px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.10);
+            overflow: hidden;
+        }
+
+        .imgArea {
+            width: 100%;
+        }
+
+        .imgArea img{
+            width: 100%;
+        }
+
+        .textArea {
+            padding: 25px 16px;
+        }
+
+        .textArea .title {
+            color: var(--text-1);
+            font-family: 'Pretendard-Regular';
+            font-weight: 700;
+        }
+
+        .textArea .desc {
+            padding-top: 12px;
+            line-height: 20px;
+            color: var(--text-2);
+            font-family: 'Pretendard-Regular';
+            font-size: 12px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+
+        .textArea button {
+            padding-top: 19px;
+            padding-left: 6px;
+            border: none;
+            background-color: transparent;
+            color: var(--text-1);
+            font-weight: 700;
+            font-family: 'Pretendard-Regular';
+            text-decoration: underline;
+        } */
+
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: #29363D;
+            font-family: 'Pretendard-Regular';
+        }
+
+        #content1 {
+            width: 288px;
+            background-color: skyblue;
+            border-radius: 8px;
+            box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.10);
+        }
+
+        .titleArea {
+            display: flex;
+            align-items: center;
+            padding: 16px 16px 12px;
+        }
+
+        .titleArea .thumb {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .titleArea .title {
+            padding-left: 16px;
+        }
+
+        .titleArea .title h2 {
+            font-size: 16px;
+            font-weight: 700;
+        }
+        
+        .titleArea .title .nickname {
+            color: #5A6A72;
+            font-size: 12px;
+        }
+
+
+        .imgArea img {
+            width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="content0">
+        <p class="imgArea">
+            <img src="./images/thumbnail.png" alt="책상 이미지">
+        </p>
+        <div class="textArea">
+            <p class="title">
+                그것을 피가 청춘을 것이다
+            </p>
+            <p class="desc">
+                청춘의 하였으며, 이것은 몸이 때문이다. 사는가 고동을 용기가 충분히 청춘 것이다. 얼마나 반짝이는 소담스...운 열락의 아름다우냐? 가지에 같지 청춘의 옷을 목숨을 피어나기 오직 군영과 칼이다. 거친 끓는 예가 뿐이다. 방지하는 꽃이 청춘을 생명을 이것이다. 인간의 거선의 피고, 모래뿐일 작고 우리 평화스러운 있는가?
+            </p>
+            <button>Read</button>
+        </div>
+    </div> -->
+    <div id="content1">
+        <div class="titleArea">
+            <p class="thumb">
+                <img src="./images/thumb.png" alt="">
+            </p>
+            <div class="title">
+                <h2>그것을 피가 청춘을 것이다</h2>
+                <p class="nickname">secondary</p>
+            </div>
+        </div>
+        <p class="imgArea">
+            <img src="./images/thumbnail.png" alt="">
+        </p>
+        <div class="textArea">
+            <p class="desc">
+                청춘의 하였으며, 이것은 몸이 때문이다. 사는가 고동을 용기가 충분히 청춘 것이다. 얼마나 반짝이는 소담스...운 열락의 아름다우냐? 가지에 같지 청춘의 옷을 목숨을 피어나기 오직 군영과 칼이다. 거친 끓는 예가 뿐이다. 방지하는 꽃이 청춘을 생명을 이것이다. 인간의 거선의 피고, 모래뿐일 작고 우리 평화스러운 있는가?
+            </p>
+            <div class="btnArea">
+                <div class="read">
+                    Read<span><img src="./images/vector7.png" alt=""></span>
+                </div>
+                <div class="icons">
+                    <p>
+                        <img src="./images/component1.png" alt="">
+                    </p>
+                    <p>
+                        <img src="./images/component2.png" alt="">
+                    </p>
+                    <p>
+                        <img src="./images/component3.png" alt="">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

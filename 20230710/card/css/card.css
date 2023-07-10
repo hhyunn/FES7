@@ -1,0 +1,92 @@
+body,
+h1,
+h2,
+p {
+    margin: 0;
+}/* 여백 없애기 */
+
+h1,
+h2 {
+    font: inherit;
+}/* 초기화 */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}/* 초기화 */
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}/* 자주 쓸거면 스니펫으로 등록해도 됨 (ctrl+p -> css.json) ( https://snippet-generator.app/ ) */
+
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Pretendard-Regular', sans-serif;
+    color: #29363d;
+}
+
+.card-ui {
+    /* background-color: skyblue; */
+    width: 288px;
+    /* width: 328px; */       /* 사이즈가 늘어날 수도 줄어들 수도 있음. 이건 수달 이미지 너비 */
+    border-radius: 8px;
+    /* overflow: hidden; */
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.1);
+}/* overflow: hidden을 사용할 때 주의할 점: 자식요소 다 잘림 (테두리에 겹쳐서 튀어나가있게 디자인한 것들), focus(outline)가 안 보이게 되는 점 주의 */ /* 그래서 overflow: hidden보다는 img에 border-radius 주는 게 좋을 듯 */
+
+.card-ui img{
+    width: 100%;
+    aspect-ratio: 288/196;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}/* 유지보수 위해 width: 100% */ /* aspect-ratio와 object-fit은 수달 이미지 때문에 준 것 */
+
+.card-ui .text-group {
+    padding: 24px 16px 16px;    
+}
+
+.card-ui h2 {
+    font-family: 'Pretendard-Bold';
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.card-ui .content {
+    font-size: 14px;
+    color: #5a6a72;
+    margin: 16px 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.6;
+    /* line-height: 160%; */      /* 1.6 == 160% (배수 개념이라 똑같음) */
+    /* height: calc(14px * 1.6 * 3); */     /* 44.8px을 반올림하는 브라우저가 있음. 그러면 글 부분이 잘리는 경우가 생김. 그래서 em으로 바꿔줬음 (크로스 브라우징) */
+    height: calc(1em * 1.6 * 3);
+}/* 피그마에 line-height: 20px 써있음. 20px/12 = 1.6 */     /* 14 * 1.6 * 2 = 44.8px // 계산하기 힘드니까, calc함수 쓰기 (폰트사이즈 기준 * line-height * 줄 개수) */ /* 줄 개수가 줄어들어도 레이아웃이 깨지지 않게끔 height를 줌 */   /* 사용자가 아무것도 입력하지 않았을 경우를 대비해, 입력하게끔 하기. 등등 고려해서 코딩하기 */
+
+.card-ui .read {
+    text-decoration: underline;
+    font-family: 'Pretendard-Bold';
+    font-size: 14px;
+}
+
+/* .card-ui p {
+    font-size: 14px;
+    color: #5a6a72;
+} */
+
+/* .card-ui a {
+    font-size: 14px;
+    font-family: 'Pretendard-Bold';
+} */

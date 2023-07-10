@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        body {
+            height: 200vh;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(65, 105, 225, 0.8);
+            color: white;
+        }
+
+        .relative {
+            position: relative;
+            /* top: 200px; */
+            /* left: 200px; */
+            right: 50px;
+        }/* relative: 니가 가지고 있던 위치에서 상대적으로 이동할 거야 */
+
+        .absolute {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }/* absolute: '조상의 위치'를 기준으로 자리를 잡음. static을 제외한 position 속성값을 가진 가장 가까운 조상 */ /* 조상이 static밖에 없으면, html 기준으로 */
+
+        .parent {
+            /* position: relative; */
+        }
+
+        .fixed {
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box fixed">
+            box
+        </div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores tenetur ad cum incidunt, veniam, voluptate commodi eveniet tempora suscipit quidem inventore. Totam nam nostrum, in qui quas dolore cupiditate hic.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores tenetur ad cum incidunt, veniam, voluptate commodi eveniet tempora suscipit quidem inventore. Totam nam nostrum, in qui quas dolore cupiditate hic.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores tenetur ad cum incidunt, veniam, voluptate commodi eveniet tempora suscipit quidem inventore. Totam nam nostrum, in qui quas dolore cupiditate hic.
+    </div>
+    <div class="box sticky">
+        box
+    </div><!-- .parent 안에 썼더니 작동 안함 (부모태그(.parent)에 높이가 없어서) --><!-- sticky는 스크롤하다가 상단에 접하면, 딱 붙음 -->
+</body>
+</html>

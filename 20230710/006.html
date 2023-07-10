@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+    <style>
+        .box1,
+        .box2,
+        .box3 {
+            width: 100px;
+            height: 100px;
+        }
+
+        .box1 {
+            background-color: royalblue;
+            position: relative; /* position의 속성이 있어야 z-index 값이 먹힘 */
+            z-index: 3;
+            /* z-index: -3; */
+        }/* 유지보수 편하게 하기 위해, z-index는 100단위 또는 1000단위로 주는 게 좋음 (레이아웃 10개가 갑자기 생길 수도 있는데, 100개가 생기는 경우는 거의 없으니까) */
+
+        .box2 {
+            background-color: slateblue;
+            /* position: relative; */
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: 2;
+            /* z-index: -1; */    /* 자식은 z-index를 음수값으로 주어 부모 뒤로 갈 수 있음 */
+        }
+
+        .box3 {
+            background-color: salmon;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            z-index: 1;     /* z-index 값이 동일한 경우, 뒤에 오는 것이 올라감 */
+        }
+
+        .parent {
+            background-color: rgba(0, 255, 255, 0.8);     /* box2와 box3은 떠있어서 높이값을 인식할 수 없어서, box1쪽에만 배경색이 채워짐 */
+            /* position: relative;
+            z-index: -1; */    /* 부모에 z-index를 주는 것은 자식에게 영향을 끼치지 않음 (부모가 z-index를 높여 자식 앞으로 나올 수 없음) */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box1">a</div>
+        <div class="box2">b</div>
+        <div class="box3">c</div>
+    </div>
+</body>
+</html>
